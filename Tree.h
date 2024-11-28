@@ -14,16 +14,7 @@ class Tree
 
 		TreeNode *root;       // Pointer to the root node
 
-		void insert(TreeNode *&, TreeNode *&);
-		void destroySubTree(TreeNode *);
-		void deleteNode(int, TreeNode *&);
-		void makeDeletion(TreeNode *&);
-		void displayInOrder(TreeNode *) const;
-		void displayPreOrder(TreeNode *) const;
-		void displayPostOrder(TreeNode *) const;
-
-	public:
-
+	public:	
 		Tree()		// Constructor
 		{ root = NULL; }
 
@@ -31,6 +22,13 @@ class Tree
 		~Tree()	// Destructor
 		{ destroySubTree(root); }
 
+		void insert(TreeNode *&, TreeNode *&);
+		void destroySubTree(TreeNode *);
+		void deleteNode(int, TreeNode *&);
+		void makeDeletion(TreeNode *&);
+		void displayInOrder(TreeNode *) const;
+		void displayPreOrder(TreeNode *) const;
+		void displayPostOrder(TreeNode *) const;
 		void insertNode(Pokemon);
 		bool searchNode(Pokemon);
 		void remove(int);
