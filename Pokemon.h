@@ -33,7 +33,7 @@ class Pokemon
 
 		string getAbility();
 
-		//overloaded operators
+		//overloaded operators for class to class and class to int
 		friend ostream& operator<<(ostream& os, const Pokemon& pokemonData)
 		{
 			os << "\n\nPokemon Data:\n"
@@ -44,13 +44,45 @@ class Pokemon
 			return os;
 		}
 
-		// bool operator<(const Pokemon& other)
-		// {
-		// 	if (name != other.name)
-		// 		return name < other.name;
-		// 	else if (idNum != other.idNum)
-		// 		return idNum < other.idNum;
-		// }
+		bool operator<(const Pokemon& other)
+		{
+			return idNum < other.idNum;
+		}
+
+		bool operator<(const int& num)
+		{
+			return idNum < num;
+		}
+
+		bool operator>(const Pokemon& other)
+		{
+			return idNum > other.idNum;
+		}
+
+		bool operator>(const int& num)
+		{
+			return idNum > num;
+		}
+
+		bool operator==(const Pokemon& other)
+		{
+			return idNum == other.idNum;
+		}
+
+		bool operator==(const int& num)
+		{
+			return idNum == num;
+		}
+
+		bool operator!=(const Pokemon& other)
+		{
+			return idNum != other.idNum;
+		}
+
+		bool operator!=(const int& num)
+		{
+			return idNum != num;
+		}
 };
 
 #endif
