@@ -12,7 +12,7 @@ class Pokemon
 	public:
 		//constructor/destructor
 		Pokemon();
-
+ 
 		~Pokemon();
 
 		//setters
