@@ -4,10 +4,10 @@
 class Pokemon
 {
 	private:
-		string name;
+		std::string name;
 		int idNum;
-		string type;
-		string ability;
+		std::string type;
+		std::string ability;
 
 	public:
 		//constructor/destructor
@@ -16,31 +16,31 @@ class Pokemon
 		~Pokemon();
 
 		//setters
-		void setName(string name);
+		void setName(std::string name);
 
 		void setIdNum(int idNum);
 
-		void setType(string type);
+		void setType(std::string type);
 
-		void setAbility(string ability);
+		void setAbility(std::string ability);
 
 		//getters
-		string getName();
+		std::string getName();
 
 		int getIdNum();
 
-		string getType();
+		std::string getType();
 
-		string getAbility();
+		std::string getAbility();
 
 		//overloaded operators for class to class and class to int
-		friend ostream& operator<<(ostream& os, const Pokemon& pokemonData)
+		friend std::ostream& operator<<(std::ostream& os, const Pokemon& pokemonData)
 		{
 			os << "\n\nPokemon Data:\n"
-			<< "Name: " << pokemonData.name << endl
-			<< "ID Number: " << pokemonData.idNum << endl
-			<< "Type: " << pokemonData.type << endl
-			<< "Ability: " << pokemonData.ability << endl;
+			<< "Name: " << pokemonData.name << std::endl
+			<< "ID Number: " << pokemonData.idNum << std::endl
+			<< "Type: " << pokemonData.type << std::endl
+			<< "Ability: " << pokemonData.ability << std::endl;
 			return os;
 		}
 
