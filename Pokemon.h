@@ -34,6 +34,23 @@ class Pokemon
 		string getAbility();
 
 		//overloaded operators
+		friend ostream& operator<<(ostream& os, const Pokemon& pokemonData)
+		{
+			os << "\n\nPokemon Data:\n"
+			<< "Name: " << pokemonData.name << endl
+			<< "ID Number: " << pokemonData.idNum << endl
+			<< "Type: " << pokemonData.type << endl
+			<< "Ability: " << pokemonData.ability << endl;
+			return os;
+		}
+
+		// bool operator<(const Pokemon& other)
+		// {
+		// 	if (name != other.name)
+		// 		return name < other.name;
+		// 	else if (idNum != other.idNum)
+		// 		return idNum < other.idNum;
+		// }
 };
 
 #endif
