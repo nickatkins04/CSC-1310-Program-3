@@ -48,7 +48,7 @@ void Tree::printNode(int num)
 		cout << nodePtr->value;
          return;
 	}
-      else if (num < nodePtr->value)
+      else if (nodePtr->value > num)	//(num < nodePtr->value)
          nodePtr = nodePtr->left;
       else
          nodePtr = nodePtr->right;
@@ -64,9 +64,9 @@ void Tree::remove(int num)
 
 void Tree::deleteNode(int num, TreeNode *&nodePtr)
 {
-   if (num < nodePtr->value)
+   if (nodePtr->value > num)	//(num < nodePtr->value)
       deleteNode(num, nodePtr->left);
-   else if (num > nodePtr->value)
+   else if (nodePtr->value < num)	//(num > nodePtr->value)
       deleteNode(num, nodePtr->right);
    else
       makeDeletion(nodePtr);
