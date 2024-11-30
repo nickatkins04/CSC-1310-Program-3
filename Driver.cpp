@@ -11,6 +11,7 @@ int main()
 
 
     Pokemon obj;
+	Tree pokedex;
 
 
     cout << "Welcome to the beautiful region of Kanto!\n";
@@ -54,6 +55,8 @@ int main()
             cout << "\n\nPokemon's ABILITY: ";
             cin >> pokemonAbility;
             obj.setAbility(pokemonAbility);
+
+			pokedex.insertNode(obj);
     }
 
 	return 0;
