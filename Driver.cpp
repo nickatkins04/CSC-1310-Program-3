@@ -10,6 +10,7 @@ int main()
     string pokemonName, pokemonType, pokemonAbility;
 
     Pokemon obj;
+	Tree pokedex;
 
     cout << "\n\nWelcome to the beautiful region of Kanto!\n";
     cout << "As a young Pokemon trainer, you're going to want this.\n\n";
@@ -36,7 +37,8 @@ int main()
     cout << "What would you like to do?\n\n";
     cout << "1. Add a Pokemon.\n";
     cout << "2. Delete a Pokemon.\n";
-    cout << "3. Display entire list of Pokemon.\n\n";
+	cout << "3. Display pokemon entry.\n";
+    cout << "4. Display entire list of Pokemon.\n\n";
 
     cin >> selection;
 
@@ -60,6 +62,21 @@ int main()
             cout << "\nPokemon's ABILITY: ";
             cin >> pokemonAbility;
             obj.setAbility(pokemonAbility);
+
+			pokedex.insertNode(obj);
+		
+		case 2:
+			cout << "Enter ID NUMBER of the Pokemon you would like to delete:";
+			cin >> pokemonIDNum;
+			pokedex.remove(pokemonIDNum);
+
+		case 3:
+			cout << "Enter ID NUMBER of the Pokemon entry you would like to see:";
+			cin >> pokemonIDNum;
+			pokedex.printNode(pokemonIDNum);
+
+		case 4:
+			pokedex.displayInOrder();
     }
 
 	return 0;
