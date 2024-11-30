@@ -6,7 +6,12 @@ using namespace std;
 
 int main()
 {
-    int selection; 
+    int selection, pokemonIDNum; 
+    string pokemonName, pokemonType, pokemonAbility;
+
+
+    Pokemon obj;
+
 
     cout << "Welcome to the beautiful region of Kanto!\n";
     cout << "As a young Pokemon trainer, you're going to want this.\n\n";
@@ -35,12 +40,20 @@ int main()
     {
         case 1:
             cout << "Pokemon's NAME: ";
+            cin >> pokemonName;
+            obj.setName(pokemonName);
 
-            cout << "Pokemon's ID NUMBER: ";
+            cout << "\n\nPokemon's ID NUMBER: ";
+            cin >> pokemonIDNum;
+            obj.setIdNum(pokemonIDNum);
 
-            cout << "Pokemon's TYPE: ";
+            cout << "\n\nPokemon's TYPE: ";
+            cin >> pokemonType;
+            obj.setType(pokemonType);
 
-            cout << "Pokemon's ABILITY: ";
+            cout << "\n\nPokemon's ABILITY: ";
+            cin >> pokemonAbility;
+            obj.setAbility(pokemonAbility);
     }
 
 	return 0;

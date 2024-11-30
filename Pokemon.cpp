@@ -4,12 +4,12 @@
 
 using namespace std;
 
-Pokemon::Pokemon(string n, string t, string a, int idN)
+Pokemon::Pokemon(string pokemonName, string pokemonType, string pokemonAbility, int pokemonIDNum)
 {
-    name = n;
-    idNum = idN;
-    type = t;
-    ability = a;
+    name = pokemonName;
+    idNum = pokemonIDNum;
+    type = pokemonType;
+    ability = pokemonAbility;
 }
 
 Pokemon::~Pokemon()

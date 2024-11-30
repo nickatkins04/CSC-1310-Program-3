@@ -10,8 +10,10 @@ class Pokemon
 		std::string ability;
 
 	public:
-		//constructor/destructor
-		Pokemon(string n, string t, string a, int idN);
+		//constructors/destructor
+		Pokemon();
+
+		Pokemon(string pokemonName, string pokemonType, string pokemonAbility, int pokemonIDNum);
  
 		~Pokemon();
 
