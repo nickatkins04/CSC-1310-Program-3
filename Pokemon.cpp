@@ -4,6 +4,11 @@
 
 using namespace std;
 
+Pokemon::Pokemon()
+{
+    
+}
+
 Pokemon::Pokemon(string pokemonName, string pokemonType, string pokemonAbility, int pokemonIDNum)
 {
     name = pokemonName;
