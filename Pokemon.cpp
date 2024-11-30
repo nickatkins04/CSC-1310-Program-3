@@ -4,11 +4,8 @@
 
 using namespace std;
 
-Pokemon::Pokemon()
+Pokemon::Pokemon(string n, string t, string a, int idN)
 {
-    string n, t, a;
-    int idN;
-
     name = n;
     idNum = idN;
     type = t;
@@ -20,24 +17,24 @@ Pokemon::~Pokemon()
 
 }
 
-void Pokemon::setName(string name)
+void Pokemon::setName(string n)
 {
-    this->name = name;
+    this->name = n;
 }
 
-void Pokemon::setIdNum(int idNum)
+void Pokemon::setIdNum(int idN)
 {
-    this->idNum = idNum;
+    this->idNum = idN;
 }
 
-void Pokemon::setType(string type)
+void Pokemon::setType(string t)
 {
-    this->type = type;
+    this->type = t;
 }
 
-void Pokemon::setAbility(string ability)
+void Pokemon::setAbility(string a)
 {
-    this->ability = ability;
+    this->ability = a;
 }
 
 string Pokemon::getName()
