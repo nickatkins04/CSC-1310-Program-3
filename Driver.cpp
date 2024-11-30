@@ -57,18 +57,26 @@ int main()
 
             pokedex.insertNode(obj);
 
+            break;
+
         case 2:
             cout << "Enter ID NUMBER of the Pokemon you would like to delete:";
             cin >> pokemonIDNum;
             pokedex.remove(pokemonIDNum);
+            
+            break;
 
         case 3:
             cout << "Enter ID NUMBER of the Pokemon entry you would like to see:";
             cin >> pokemonIDNum;
             pokedex.printNode(pokemonIDNum);
 
+            break;
+
         case 4:
             pokedex.displayInOrder();
+
+            break;
 
         case 5:
             break;
