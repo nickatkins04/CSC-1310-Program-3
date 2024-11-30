@@ -31,7 +31,8 @@ int main()
     cout << "What would you like to do?\n\n";
     cout << "1. Add a Pokemon.\n";
     cout << "2. Delete a Pokemon.\n";
-    cout << "3. Display entire list of Pokemon.\n\n";
+	cout << "3. Display pokemon entry.\n";
+    cout << "4. Display entire list of Pokemon.\n\n";
 
     cin >> selection;
 
