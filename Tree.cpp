@@ -2,29 +2,32 @@
 #include "Tree.h"
 using namespace std;
 
-void Tree::insertNode(Pokemon num)
+//Function that adds a new pokemon entry into the pokedex
+void Tree::insertNode(Pokemon entry)
 {
-   TreeNode *newNode = NULL;	// Pointer to a new node.
+   TreeNode *newNode = NULL;	// Pointer to a new node
 
-   // Create a new node and store num in it.
+   // Create a new node and store entry in it
    newNode = new TreeNode;
-   newNode->value = num;
+   newNode->value = entry;
    newNode->left = newNode->right = NULL;
    
-   // Insert the node.
+   // Insert new node
    insert(root, newNode);
 }
 
+//Recursive function for traversing and inserting new node
 void Tree::insert(TreeNode *&nodePtr, TreeNode *&newNode)
 {
    if (nodePtr == NULL)
-      nodePtr = newNode;                  // Insert the node.
+      nodePtr = newNode;	// Inserts the node
    else if (newNode->value < nodePtr->value)
-      insert(nodePtr->left, newNode);     // Search the left branch
+      insert(nodePtr->left, newNode);	// Search left branch
    else 
-      insert(nodePtr->right, newNode);    // Search the right branch
+      insert(nodePtr->right, newNode);	// Search right branch
 }
 
+//Recursive function for removing subtree
 void Tree::destroySubTree(TreeNode *nodePtr)
 {
    if (nodePtr)
@@ -37,6 +40,7 @@ void Tree::destroySubTree(TreeNode *nodePtr)
    }
 }
 
+//Function for printing node given index number
 void Tree::printNode(int num)
 {
    TreeNode *nodePtr = root;
@@ -48,7 +52,7 @@ void Tree::printNode(int num)
 		cout << nodePtr->value;
          return;
 	}
-      else if (nodePtr->value > num)	//(num < nodePtr->value)
+      else if (nodePtr->value > num)
          nodePtr = nodePtr->left;
       else
          nodePtr = nodePtr->right;
@@ -57,24 +61,27 @@ void Tree::printNode(int num)
    return;
 }
 
+//Function that removes entry specified by user by calling delete node
 void Tree::remove(int num)
 {
    deleteNode(num, root);
 }
 
+//Recursive function that deletes node
 void Tree::deleteNode(int num, TreeNode *&nodePtr)
 {
-   if (nodePtr->value > num)	//(num < nodePtr->value)
+   if (nodePtr->value > num)
       deleteNode(num, nodePtr->left);
-   else if (nodePtr->value < num)	//(num > nodePtr->value)
+   else if (nodePtr->value < num)
       deleteNode(num, nodePtr->right);
    else
       makeDeletion(nodePtr);
 }
 
+//Function that deletes node and rebuilds tree
 void Tree::makeDeletion(TreeNode *&nodePtr)
 {
-   // Define a temporary pointer to use in reattaching
+   // Temp pointer
    // the left subtree.
    TreeNode *tempNodePtr = NULL;
 
@@ -83,41 +90,39 @@ void Tree::makeDeletion(TreeNode *&nodePtr)
    else if (nodePtr->right == NULL)
    {
       tempNodePtr = nodePtr;
-      nodePtr = nodePtr->left;   // Reattach the left child
+      nodePtr = nodePtr->left;   // Reattach left child
       delete tempNodePtr;
    }
    else if (nodePtr->left == NULL)
    {
       tempNodePtr = nodePtr;
-      nodePtr = nodePtr->right;  // Reattach the right child
+      nodePtr = nodePtr->right;  // Reattach right child
       delete tempNodePtr;
    }
-   // If the node has two children.
+   // If node has two children
    else
    {
-      // Move one node the right.
+      // Move one node right
       tempNodePtr = nodePtr->right;
-      // Go to the end left node.
+      // Go to end left node
       while (tempNodePtr->left)
          tempNodePtr = tempNodePtr->left;
-      // Reattach the left subtree.
+      // Reattach left subtree
       tempNodePtr->left = nodePtr->left;
       tempNodePtr = nodePtr;
-      // Reattach the right subtree.
+      // Reattach right subtree
       nodePtr = nodePtr->right;
       delete tempNodePtr;
    }
 }
 
+//Recursive function that displays tree in order of index numbers
 void Tree::displayInOrder(TreeNode *nodePtr) const
 {
    if (nodePtr)
    {
-	  //cout << "\nLeft, nodePtr->left is " << nodePtr->left;
       displayInOrder(nodePtr->left);
-	  //cout << "\nNode";
       cout << nodePtr->value << endl;
-	  //cout << "\nRight, nodePtr->right is " << nodePtr->right;
       displayInOrder(nodePtr->right);
    }
 }

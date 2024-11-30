@@ -14,6 +14,7 @@ class Tree
 
 		TreeNode *root;       // Pointer to the root node
 		
+
 		void insert(TreeNode *&, TreeNode *&);
 		void destroySubTree(TreeNode *);
 		void deleteNode(int, TreeNode *&);
@@ -28,7 +29,7 @@ class Tree
 		~Tree()	// Destructor
 		{ destroySubTree(root); }
 
-		
+		//Public functions to adjust and print tree
 		void insertNode(Pokemon);
 		void printNode(int);
 		void remove(int);
