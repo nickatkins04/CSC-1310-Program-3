@@ -6,26 +6,32 @@ using namespace std;
 
 int main()
 {
-    int selection, pokemonIDNum; 
+    int input1, input2, selection, pokemonIDNum; 
     string pokemonName, pokemonType, pokemonAbility;
-
 
     Pokemon obj;
 
-
-    cout << "Welcome to the beautiful region of Kanto!\n";
+    cout << "\n\nWelcome to the beautiful region of Kanto!\n";
     cout << "As a young Pokemon trainer, you're going to want this.\n\n";
+    cout << "Press anything, then enter.\n";
 
-    cout << "You obtained a POKEDEX!\n\n";
+    cin >> input1;
+
+    cout << "\n\nYou obtained a POKEDEX!\n\n";
 
     cout << "This will give you a place to log the Pokemon you cross paths with.\n\n";
 
     cout << "Now, off on your way you go!\n";
     cout << "Be safe, and have a wonderful time getting to know the creatures this region has to offer!\n\n\n";
 
-    system("CLS");
+    cout << "Press anything, then enter.\n";
+
+    cin >> input2;
+
     
-    cout << "Welcome to your Pokedex!\n\n";
+    system("CLS");
+
+    cout << "\n\nWelcome to your Pokedex!\n\n";
     cout << "Here, you can enter the name, number index (ID Number), type, and ability of the Pokemon you just caught.\n";
     cout << "What would you like to do?\n\n";
     cout << "1. Add a Pokemon.\n";
@@ -43,15 +49,15 @@ int main()
             cin >> pokemonName;
             obj.setName(pokemonName);
 
-            cout << "\n\nPokemon's ID NUMBER: ";
+            cout << "\nPokemon's ID NUMBER: ";
             cin >> pokemonIDNum;
             obj.setIdNum(pokemonIDNum);
 
-            cout << "\n\nPokemon's TYPE: ";
+            cout << "\nPokemon's TYPE: ";
             cin >> pokemonType;
             obj.setType(pokemonType);
 
-            cout << "\n\nPokemon's ABILITY: ";
+            cout << "\nPokemon's ABILITY: ";
             cin >> pokemonAbility;
             obj.setAbility(pokemonAbility);
     }
