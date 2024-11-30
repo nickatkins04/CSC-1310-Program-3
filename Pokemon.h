@@ -11,7 +11,7 @@ class Pokemon
 
 	public:
 		//constructor/destructor
-		Pokemon(string n, string t, string a, int idN);
+		Pokemon(std::string n, std::string t, std::string a, int idN);
  
 		~Pokemon();
 

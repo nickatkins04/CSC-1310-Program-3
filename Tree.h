@@ -24,7 +24,6 @@ class Tree
 	public:	
 		Tree()		// Constructor
 		{ root = NULL; }
-
 	
 		~Tree()	// Destructor
 		{ destroySubTree(root); }
