@@ -29,9 +29,6 @@ int main()
 
     cin >> input2;
 
-    
-    system("CLS");
-
     cout << "\n\nWelcome to your Pokedex!\n\n";
     cout << "Here, you can enter the name, number index (ID Number), type, and ability of the Pokemon you just caught.\n";
     cout << "What would you like to do?\n\n";
