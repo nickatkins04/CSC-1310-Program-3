@@ -58,6 +58,19 @@ int main()
             obj.setAbility(pokemonAbility);
 
 			pokedex.insertNode(obj);
+		
+		case 2:
+			cout << "Enter ID NUMBER of the Pokemon you would like to delete:";
+			cin >> pokemonIDNum;
+			pokedex.remove(pokemonIDNum);
+
+		case 3:
+			cout << "Enter ID NUMBER of the Pokemon entry you would like to see:";
+			cin >> pokemonIDNum;
+			pokedex.printNode(pokemonIDNum);
+
+		case 4:
+			pokedex.displayInOrder();
     }
 
 	return 0;
