@@ -1,0 +1,69 @@
+Test_case.txt
+Test 1:
+1
+Bulbasaur
+1
+Grass
+Overgrow
+
+1
+Charizard
+6
+Fire/Flying
+Blaze
+
+3
+1
+(Show Bulbasaur info)
+
+3
+6
+(Show Charizard info)
+
+4
+(Show Bulbasaur then Charizard)
+
+2
+1
+
+4
+(Show Charizard)
+
+2
+1
+(Cannot delete empty node)
+
+3
+1
+(There is no pokemon entry)
+
+2
+6
+
+4
+(Blank)
+
+2
+any number
+(Cannot delete empty node)
+
+Other input other 1-5
+(Not an option)
+
+5
+(End program)
+
+Test 2:
+2
+Any number
+(cannot delete empty node)
+
+3
+Any number
+(Not a pokemon entry)
+
+4
+(Blank)
+
+5
+(End Program)
