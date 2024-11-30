@@ -6,12 +6,14 @@ using namespace std;
 
 int main()
 {
+    //declaring variables
     int selection, pokemonIDNum;
     string pokemonName, pokemonType, pokemonAbility;
 
     Pokemon obj;
     Tree pokedex;
 
+    //intro dialogue
     cout << "\n\nYou obtained a POKEDEX!\n\n";
 
     cout << "This will give you a place to log the Pokemon you cross paths with.\n\n";
@@ -21,7 +23,8 @@ int main()
 
     cout << "\n\nWelcome to your Pokedex!\n\n";
     cout << "Here, you can enter the name, number index (ID Number), type, and ability of the Pokemon you just caught.\n";
-
+    
+    //user input menu
     do
     {
         cout << "What would you like to do?\n\n";
@@ -38,6 +41,7 @@ int main()
 
         switch (selection)
         {
+        //adding a pokemon
         case 1:
             cout << "Pokemon's NAME: ";
             cin >> pokemonName;
@@ -58,14 +62,14 @@ int main()
             pokedex.insertNode(obj);
 
             break;
-
+        //deleting a pokemon (by ID number)
         case 2:
             cout << "Enter ID NUMBER of the Pokemon you would like to delete:";
             cin >> pokemonIDNum;
             pokedex.remove(pokemonIDNum);
             
             break;
-
+        //displaying information for a single pokemon
         case 3:
             cout << "Enter ID NUMBER of the Pokemon entry you would like to see:";
             cin >> pokemonIDNum;
@@ -73,6 +77,7 @@ int main()
 
             break;
 
+        //displaying information for entire list of pokemon in order by ID number
         case 4:
             pokedex.displayInOrder();
 
@@ -81,6 +86,7 @@ int main()
         case 5:
             break;
 
+        //input invalidation 
         default:
             cout << "This is not an option.\n";
         }
