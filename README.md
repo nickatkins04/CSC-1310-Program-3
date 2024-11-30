@@ -1,1 +1,2 @@
 # CSC 1310 Program 3
+The idea is to create a program using one class for each ordered binary search tree and corresponding data. There will be tree nodes with public functions to insert, access, remove, and print data. Data will be comprised of private variables and getters/setters for access, as well as comparison and stream operator overloads. There will be one file each for the two classes as well as a driver file.
