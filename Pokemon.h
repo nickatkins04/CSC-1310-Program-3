@@ -10,7 +10,9 @@ class Pokemon
 		std::string ability;
 
 	public:
-		Pokemon(string pokemonName, string pokemonType, string pokemonAbility, int pokemonIDNum);
+		Pokemon();
+
+		Pokemon(std::string pokemonName, std::string pokemonType, std::string pokemonAbility, int pokemonIDNum);
  
 		~Pokemon();
 
